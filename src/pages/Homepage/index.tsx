@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import Menu from '../../components/Menu';
-import ShowRoom from '../../components/ShowRoom';
+import MainStages from '../../components/MainStages';
 
 const Homepage = () => {
 	return (
 		<Container>
-			<ShowRoom />
+			<MainStages />
 			<Menu />
 		</Container>
 	);
