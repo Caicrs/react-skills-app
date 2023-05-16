@@ -2,7 +2,8 @@
 	text-align: center;
 	height: 100vh;
 	background-color: #282c34;
-	padding: 5%;
+	padding: 10%  5%;
+	box-sizing: border-box;
 }
 
 .App-logo {
