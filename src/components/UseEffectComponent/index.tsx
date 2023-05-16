@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import * as S from './style';
 const UseLayoutEffectComponent = () => {
 	const [valor, setValor] = useState(0);
 
@@ -11,7 +11,7 @@ const UseLayoutEffectComponent = () => {
 		setValor(valor + 1);
 	};
 	return (
-		<Container>
+		<S.Container>
 			<div>
 				<h2>useEffect</h2>
 				<p style={{ fontSize: 12 }}>
@@ -29,24 +29,9 @@ const UseLayoutEffectComponent = () => {
 				</p>
 				<button onClick={handleClick}>Clique aqui ({valor})</button>
 			</div>
-		</Container>
+		</S.Container>
 	);
 };
 
 export default UseLayoutEffectComponent;
 
-const Container = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	color: white;
-	max-height: 400px;
-	gap: 24px;
-	overflow-y: scroll;
-	padding: 0 10%;
-`;
-
-const Text = styled.div`
-	width: 80%;
-	height: 100%;
-`;

@@ -22,6 +22,11 @@ function Menu() {
 				variant={stage === 3 ? 'primary' : 'secondary'}>
 				Git
 			</Button>
+			<Button
+				onClick={() => setStage(4)}
+				variant={stage === 4 ? 'primary' : 'secondary'}>
+				Pixabay
+			</Button>
 		</ButtonGroup>
 	);
 }
