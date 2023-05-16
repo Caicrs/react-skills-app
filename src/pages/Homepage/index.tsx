@@ -1,22 +1,16 @@
-import styled from 'styled-components';
+import * as S from './styles';
 import Menu from '../../components/Menu';
 import MainStages from '../../components/MainStages';
+import { useGeneral } from '../../contexts/GeneralContext';
 
 const Homepage = () => {
+	const { isLoading } = useGeneral();
 	return (
-		<Container>
+		<S.Container>
 			<MainStages />
-			<Menu />
-		</Container>
+			{!isLoading && <Menu />}
+		</S.Container>
 	);
 };
 
 export default Homepage;
-
-const Container = styled.div`
-	display: flex;
-	justify-content: flex-end;
-	flex-direction: column;
-	gap: 24px;
-	height: 100%;
-`;
