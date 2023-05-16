@@ -1,15 +1,14 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Homepage from './pages/Homepage';
-import { GeneralProvider } from './contexts/GeneralContext';
+import { GeneralProvider, useGeneral } from './contexts/GeneralContext';
+import DefaultRoutes from './Routes';
 
 function App() {
+	const { isLoading } = useGeneral();
 	return (
 		<GeneralProvider>
-			<div className='App'>
-				<Homepage />
-			</div>
+			<DefaultRoutes />
 		</GeneralProvider>
 	);
 }
