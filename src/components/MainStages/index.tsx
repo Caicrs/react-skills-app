@@ -1,8 +1,8 @@
 import { useGeneral } from '../../contexts/GeneralContext';
-import Stage1 from './stage1/stage_1';
-import Stage2 from './stage2/stage_2';
-import Stage3 from './stage3/stage_3';
-import Stage_4 from './stage4';
+import Stage1 from './stage1';
+import Stage2 from './stage2';
+import Stage3 from './stage3';
+import Stage4 from './stage4';
 import * as S from './styles';
 
 const StageComponents = () => {
@@ -29,14 +29,14 @@ const StageComponents = () => {
 		case 4:
 			return (
 				<S.Container>
-					<Stage_4 />
+					<Stage4 />
 				</S.Container>
 			);
 		default:
 			return <div>Invalid stage number</div>;
 	}
-
-	return null;
+	// eslint-disable-next-line no-unreachable
+	return (<></>)
 };
 
 export default StageComponents;
